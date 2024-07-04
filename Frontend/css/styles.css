@@ -61,16 +61,12 @@ textarea {
 .encrypt {
     background-color: #0A3871;
     color: white;
-
 }
 
-/* Efecto al pasar el mouse */
 .encrypt:hover {
     background-color: #3164a1;
-    color: white;
 }
 
-/* Efecto al hacer clic */
 .encrypt:active {
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -80,23 +76,16 @@ textarea {
     background-color: #D8DFE8;
     color: #0A3871;
     border: 1px solid #0A3871;
-    
 }
 
-/* Efecto al pasar el mouse */
 .decrypt:hover {
     background-color: #c5ddfb;
-    color: #0A3871;
 }
 
-/* Efecto al hacer clic */
 .decrypt:active {
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 .note {
     font-size: 20px;
@@ -143,11 +132,6 @@ textarea {
     color: #495057;
 }
 
-.copy {
-    width: 10px;
-    margin-top: 20px;
-}
-
 .copy-btn {
     padding: 24px 0;
     width: 100%;
@@ -161,16 +145,111 @@ textarea {
     margin-top: auto;
     transition: all 0.3s ease;
 }
-/* Efecto al pasar el mouse */
+
 .copy-btn:hover {
     background-color: #0A3871;
     color: white;
 }
 
-/* Efecto al hacer clic */
 .copy-btn:active {
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        padding: 20px;
+        margin-right: 0;
+    }
+
+    textarea {
+        height: 300px;
+    }
+
+    .buttons {
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .card {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-section, .output-section {
+        padding: 10px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card img {
+        max-width: 200px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .copy-btn {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    textarea {
+        height: 200px;
+        font-size: 16px;
+    }
+
+    .note {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .card img {
+        max-width: 150px;
+    }
 }
 
 

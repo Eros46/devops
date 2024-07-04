@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="/FrontEnd/Frontend/css/styles.css">
-    <link rel="icon" href="/FrontEnd/Frontendimg/_068e4915-c063-482f-8c93-2a4a20478ae4-removebg-preview.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../Frontend/img/_068e4915-c063-482f-8c93-2a4a20478ae4-removebg-preview.ico">
 </head>
 <body>
     <div class="container">
         <div class="input-section">
             <div class="logo">
-                <img src="/FrontEnd/Frontend/img/Logo.svg" alt="logo">
+                <img src="../img/Logo.svg" alt="logo">
             </div>
             <textarea placeholder="Ingrese el texto aquí"></textarea>
+            <div class="note">🔒 Solo letras minúsculas y sin acentos</div>
             <div class="buttons">
                 <button id="encrypt-btn" class="btn encrypt">Encriptar</button>
                 <button id="decrypt-btn" class="btn decrypt">Desencriptar</button>
@@ -21,14 +22,14 @@
         </div>
         <div class="output-section">
             <div class="card">
-                <img src="/FrontEnd/Frontend/img/Muñeco.svg" alt="Muñeco">
+                <img src="../img/Muñeco.svg" alt="Muñeco">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 <button id="copy-btn" class="copy-btn" style="display: none;">Copiar</button>
             </div>
         </div>
     </div>
-    <script src="/FrontEnd/Frontend/js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
 
