@@ -51,22 +51,52 @@ textarea {
 .btn {
     padding: 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 24px;
     cursor: pointer;
     font-size: 24px;
     flex: 1;
+    transition: all 0.3s ease;
 }
 
 .encrypt {
     background-color: #0A3871;
     color: white;
+
+}
+
+/* Efecto al pasar el mouse */
+.encrypt:hover {
+    background-color: #3164a1;
+    color: white;
+}
+
+/* Efecto al hacer clic */
+.encrypt:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .decrypt {
     background-color: #D8DFE8;
     color: #0A3871;
     border: 1px solid #0A3871;
+    
 }
+
+/* Efecto al pasar el mouse */
+.decrypt:hover {
+    background-color: #c5ddfb;
+    color: #0A3871;
+}
+
+/* Efecto al hacer clic */
+.decrypt:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 .note {
     font-size: 20px;
@@ -129,6 +159,18 @@ textarea {
     font-size: 16px;
     cursor: pointer;
     margin-top: auto;
+    transition: all 0.3s ease;
+}
+/* Efecto al pasar el mouse */
+.copy-btn:hover {
+    background-color: #0A3871;
+    color: white;
+}
+
+/* Efecto al hacer clic */
+.copy-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 

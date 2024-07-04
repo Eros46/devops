@@ -29,34 +29,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     const updateOutput = (text) => {
-        outputTitle.textContent = "Mensaje procesado";
-        outputText.textContent = text;
-        outputImage.style.display = 'none';
-        copyBtn.style.display = 'block';
+        if (text && text.trim() !== '') {
+            outputTitle.textContent = "Mensaje procesado";
+            outputText.textContent = text;
+            outputImage.style.display = 'none';
+            copyBtn.style.display = 'block';
+        } else {
+            resetOutput();
+        }
+    };
+
+    const resetOutput = () => {
+        outputTitle.textContent = "Ningún mensaje fue encontrado";
+        outputText.textContent = "Ingresa el texto que desees encriptar o desencriptar.";
+        outputImage.style.display = 'block';
+        copyBtn.style.display = 'none';
     };
 
     const copyToClipboard = () => {
         const textToCopy = outputText.textContent;
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('Texto copiado al portapapeles');
+            // Opcional: Mostrar algún feedback al usuario
         }).catch((err) => {
             console.error('Error al copiar el texto: ', err);
         });
     };
 
     encryptBtn.addEventListener('click', () => {
-        const text = textarea.value;
-        const encryptedText = encrypt(text);
-        updateOutput(encryptedText);
+        const text = textarea.value.trim();
+        if (text) {
+            const encryptedText = encrypt(text);
+            updateOutput(encryptedText);
+        } else {
+            resetOutput();
+        }
     });
 
     decryptBtn.addEventListener('click', () => {
-        const text = textarea.value;
-        const decryptedText = decrypt(text);
-        updateOutput(decryptedText);
+        const text = textarea.value.trim();
+        if (text) {
+            const decryptedText = decrypt(text);
+            updateOutput(decryptedText);
+        } else {
+            resetOutput();
+        }
     });
 
     copyBtn.addEventListener('click', copyToClipboard);
 });
-
 
