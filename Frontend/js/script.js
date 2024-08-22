@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const updateOutput = (text) => {
         if (text && text.trim() !== '') {
-            outputTitle.textContent = "Mensaje procesado";
+            outputTitle.textContent = "Message processed";
             outputText.textContent = text;
             outputImage.style.display = 'none';
             copyBtn.style.display = 'block';
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     const resetOutput = () => {
-        outputTitle.textContent = "Ningún mensaje fue encontrado";
-        outputText.textContent = "Ingresa el texto que desees encriptar o desencriptar.";
+        outputTitle.textContent = "No message was found";
+        outputText.textContent = "Enter the text you want to encrypt or decrypt.";
         outputImage.style.display = 'block';
         copyBtn.style.display = 'none';
     };
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         navigator.clipboard.writeText(textToCopy).then(() => {
             // Opcional: Mostrar algún feedback al usuario
         }).catch((err) => {
-            console.error('Error al copiar el texto: ', err);
+            console.error('Error copying text: ', err);
         });
     };
 
